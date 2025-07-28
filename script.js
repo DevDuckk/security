@@ -48,8 +48,9 @@ document.addEventListener("DOMContentLoaded", function() {
         $(".nav-content").toggleClass("show");
         $(".overlay").toggleClass("show");
     });
-    $(".home-btn").click(function() {
-        $(".home-btn").toggleClass("click active");
+    $(".nav-content ul li").click(function() {
+        // $("nav-content ul li").toggleClass("color");
+        console.log("Clicked li");
     });
 });
 
