@@ -90,7 +90,7 @@ ul{
         gap: 12vw;
     }
 }
-@media (min-width: 740px) and (max-width: 1024px) {
+@media (min-width: 974px) and (max-width: 1024px) {
     .nav-content{
         margin: 0;
         width: auto;
@@ -104,6 +104,7 @@ ul{
         margin: 10px;
         background-color: transparent;
         color: white;
+        text-wrap: nowrap;
     }
     .content{
         position: relative;
@@ -111,4 +112,41 @@ ul{
         gap: 10vw;
     }
 
+}
+@media (max-width: 973px) {
+    .nav-content{
+        margin: 0;
+        width: auto;
+        height: 100px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .nav-content ul li{
+        display: inline-block;
+        padding: 20px;
+        margin: 10px;
+        background-color: transparent;
+        color: white;
+        width: 20vw;
+        text-wrap: nowrap;
+    }
+    .content{
+        position: relative;
+        display: block;
+        left: 0;
+        top: 0;
+        margin: 5vh 20vw;           /* Căn giữa ngang */
+    }
+    .temperature, .humidity{
+        width: 60vw;
+        height: 200px;
+        margin-top: 100px;
+    }
+    .temperature h1, .humidity h1{
+        padding: 15px;
+    }
+    #temperature-value, #humidity-value{
+        position: relative;
+        top: 30px;
+    }   
 }
