@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body> 
+    <nav class="nav-content">
+        <ul class="nav-list">
+            <li>Home</li>
+            <li>Feature</li>
+            <li>About us</li>
+        </ul>
+    </nav>
+    <section class="content">
+        <div class="temperature">
+            <h1>Tempareture</h1>
+            <p id="temperature-value"> <span class="iconC">&deg;C</span></p>
+
+        </div>
+        <div class="humidity">
+            <h1>Humidity</h1>
+            <p id="humidity-value"> <span class="icon%">%</span></p>
+        </div>
+    </section>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

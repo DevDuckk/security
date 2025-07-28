@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --grey: #a2a2a2;
+    --smoke-white: #ffffffc7;
+    --low-black: #00000000;
+    --black: #413f3f;
+
+}
+body{
+    background-color: var(--black);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+    font-weight: lighter;
+
+}
+
+/* Nav */
+.nav-content {
+    background-color: var(--grey);
+    margin: 5vh;
+    width: 20vw;
+    height: 90vh;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: 5px 5px 10px rgb(220, 220, 220); */
+}
+.nav-content ul li{
+    background-color: var(--smoke-white);
+    padding: 5vh 3vw;
+    margin: 10vh 1vw;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    max-width: 20vw;
+}
+.nav-content ul li:hover{    
+    box-shadow: 0px 0px 30px rgba(240, 240, 240);
+    cursor: pointer;
+    background-color: var(--low-black);
+    color: var(--smoke-white);
+}
+
+ul{
+    list-style: none;
+}
+/* Section 1 */
+.content{
+    position: absolute;
+    top: 50px;
+    left: 32vw;
+    display: flex;
+    gap: 8vw;
+}
+.temperature, .humidity{
+    /* border: 5px solid var(--grey); */
+    border-radius: 10px;
+    width: 350px;
+    height: 200px;
+    display: flexbox;
+    background-color: var(--smoke-white);
+    box-shadow: inset 0px 0px 10px rgb(0, 0, 0);
+}
+.temperature h1,.humidity h1{
+    margin: 10px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#temperature-value, #humidity-value{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 40px;
+}
+
+@media (max-width: 1440px) {
+    .content{
+        left: 35vw;
+        gap: 12vw;
+    }
+}
+/* @media (min-width: 1024px) and (max-width: 1439px) {
+    .nav-content{
+        margin: 0;
+        width: auto;
+        height: 100px;
+    }
+    .nav-list{
+        display: inline-block;
+    }
+    .content{
+        position: relative;
+        left: 11vw;
+        gap: 10vw;
+    }
+
+} */
