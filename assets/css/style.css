@@ -19,6 +19,9 @@ body{
     font-weight: lighter;
 
 }
+header{
+    display: none;
+}
 
 /* Nav */
 .nav-content {
@@ -39,6 +42,7 @@ body{
     border-radius: 3px;
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: 30px;
     max-width: 20vw;
 }
@@ -100,6 +104,8 @@ ul{
     }
     .nav-content ul li{
         display: inline-block;
+
+
         padding: 20px;
         margin: 10px;
         background-color: transparent;
@@ -113,7 +119,7 @@ ul{
     }
 
 }
-@media (max-width: 973px) {
+@media (min-width: 431px) and (max-width: 973px) {
     .nav-content{
         margin: 0;
         width: auto;
@@ -139,6 +145,67 @@ ul{
     }
     .temperature, .humidity{
         width: 60vw;
+        height: 200px;
+        margin-top: 100px;
+    }
+    .temperature h1, .humidity h1{
+        padding: 15px;
+    }
+    #temperature-value, #humidity-value{
+        position: relative;
+        top: 30px;
+    }   
+}
+@media (max-width: 430px) {
+
+    header{
+        display: block;
+        background-color: var(--grey);
+        width: auto;
+        height: 100px;
+    }
+    .menu-btn i{ 
+        background-color: white;
+        font-size: 30px;
+        padding: 20px;
+        line-height: 100px;
+        border-radius: 5px;
+        margin-left: 20px;
+    }
+    .animation-click {
+        animation: changeShape 1s linear forwards;
+    }
+    @keyframes changeShape {
+        0%{
+            border-radius: 10%;
+        }
+        25%{
+            border-radius: 20%;
+        }
+        50%{
+            border-radius: 30%;
+        }
+        75%{
+            border-radius: 40%;
+        }
+        100%{
+            border-radius: 50%;
+        }
+    }
+
+    .nav-content{
+        display: none;
+    }
+
+    .content{
+        position: relative;
+        display: block;
+        left: 0;
+        top: 0;
+        margin: 5vh 10vw;           /* Căn giữa ngang */
+    }
+    .temperature, .humidity{
+        width: 80vw;
         height: 200px;
         margin-top: 100px;
     }

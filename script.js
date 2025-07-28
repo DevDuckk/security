@@ -39,3 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("humidity-value").innerHTML = `${newHumidity} <span class="icon%">%</span>`;
     });
 });
+
+$(".menu-btn i").click(function() {
+    $(".menu-btn i").addClass("animation-click");
+});
