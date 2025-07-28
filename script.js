@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const db = firebase.database();
 
     // Lắng nghe thay đổi tại /nhiet_do
-    db.ref("/log/nhiet_do").on("value", (snapshot) => {
+    db.ref("/logs/nhiet_do").on("value", (snapshot) => {
         const nhietDo = snapshot.val();
         const newTemp = nhietDo.toFixed(2) || 0; // Mặc định là 0 nếu không có giá trị
         document.getElementById("temperature-value").innerHTML = `${newTemp} <span class="iconC">&deg;C</span>`;

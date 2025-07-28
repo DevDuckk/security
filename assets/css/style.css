@@ -84,7 +84,7 @@ ul{
     top: 40px;
 }
 
-@media (max-width: 1440px) {
+@media (min-width: 1440px) {
     .content{
         left: 35vw;
         gap: 12vw;
