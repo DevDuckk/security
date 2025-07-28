@@ -38,8 +38,18 @@ document.addEventListener("DOMContentLoaded", function() {
         const newHumidity = doAm.toFixed(2) || 0; // Mặc định là 0 nếu không có giá trị
         document.getElementById("humidity-value").innerHTML = `${newHumidity} <span class="icon%">%</span>`;
     });
+
+
+    $(".menu-btn i").click(function() {
+        $(".menu-btn i").toggleClass("round");
+        $(".menu-btn i").toggleClass("ti-menu");
+        $(".menu-btn i").toggleClass("ti-close");
+        console.log("Clicked");
+        $(".nav-content").toggleClass("show");
+        $(".overlay").toggleClass("show");
+    });
+    $(".home-btn").click(function() {
+        $(".home-btn").toggleClass("click active");
+    });
 });
 
-$(".menu-btn i").click(function() {
-    $(".menu-btn i").addClass("animation-click");
-});

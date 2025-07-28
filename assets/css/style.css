@@ -9,7 +9,7 @@
     --smoke-white: #ffffffc7;
     --low-black: #00000000;
     --black: #413f3f;
-
+    --grey-light: #a2a2a2ed;
 }
 body{
     background-color: var(--black);
@@ -19,9 +19,11 @@ body{
     font-weight: lighter;
 
 }
+
 header{
     display: none;
 }
+
 
 /* Nav */
 .nav-content {
@@ -45,11 +47,18 @@ header{
     align-items: center;
     font-size: 30px;
     max-width: 20vw;
+    transition: transform 0.5s linear, box-shadow 0.5s inherit;
+}
+.nav-content ul li:active{
+    transform: scale(0.95);
+    box-shadow: 0px 0px 30px rgb(66, 66, 66);
+    background-color: var(--grey-light);        
+    color: var(--black);
 }
 .nav-content ul li:hover{    
-    box-shadow: 0px 0px 30px rgba(240, 240, 240);
+
     cursor: pointer;
-    background-color: var(--low-black);
+    background-color: var(--black);
     color: var(--smoke-white);
 }
 
@@ -104,13 +113,20 @@ ul{
     }
     .nav-content ul li{
         display: inline-block;
-
-
         padding: 20px;
         margin: 10px;
         background-color: transparent;
         color: white;
         text-wrap: nowrap;
+    }
+    @keyframes click {
+        0% {
+            font-size: 10px;
+        }
+        100% {
+            font-size: normal;
+        }
+        
     }
     .content{
         position: relative;
@@ -171,30 +187,50 @@ ul{
         line-height: 100px;
         border-radius: 5px;
         margin-left: 20px;
-    }
-    .animation-click {
-        animation: changeShape 1s linear forwards;
-    }
-    @keyframes changeShape {
-        0%{
-            border-radius: 10%;
-        }
-        25%{
-            border-radius: 20%;
-        }
-        50%{
-            border-radius: 30%;
-        }
-        75%{
-            border-radius: 40%;
-        }
-        100%{
-            border-radius: 50%;
-        }
+        transition: border-radius 0.1s linear;
     }
 
+    .menu-btn .round{
+        border-radius: 50%;
+    }
+
+    .overlay{
+        position: fixed;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .overlay.show{
+        opacity: 1;
+        visibility: visible;
+    }
     .nav-content{
-        display: none;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        width: 60vw;
+        height: max-content;
+
+        z-index: 1;
+        background-color: var(--grey-light);
+        left: -60vw;
+        transition: left 0.3s ease-in-out;
+    }
+    .nav-content.show{
+        left: 0px;
+    }
+    .nav-content ul li{
+        background-color: transparent;
+        color: white;
+        text-wrap-mode: nowrap;
+        margin: 0;
+        border-radius: 5px;
+
     }
 
     .content{
@@ -202,7 +238,7 @@ ul{
         display: block;
         left: 0;
         top: 0;
-        margin: 5vh 10vw;           /* Căn giữa ngang */
+        margin: 5vh 10vw;  
     }
     .temperature, .humidity{
         width: 80vw;
