@@ -52,5 +52,20 @@ document.addEventListener("DOMContentLoaded", function() {
         // $("nav-content ul li").toggleClass("color");
         console.log("Clicked li");
     });
+
+
+    const menuItems = document.querySelectorAll('.nav-content ul li');
+
+    menuItems.forEach((li) => {
+        li.addEventListener("touchstart", function() {
+            li.style.transform = "scale(0.8)";
+            li.style.color = "black";
+        });
+        li.addEventListener("touchend", function() {
+            li.style.transform = "";
+            li.style.color = "";
+        }, 200);
+    });
+    
 });
 
