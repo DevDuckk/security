@@ -222,6 +222,8 @@ ul{
         background-color: var(--grey-light);
         left: -60vw;
         transition: left 0.3s ease-in-out;
+        border-radius: 0;
+        border-bottom-right-radius: 10px;
     }
     .nav-content.show{
         left: 0px;
@@ -233,7 +235,7 @@ ul{
         margin: 0;
         padding: 15vw 30vw;
         box-sizing: border-box;
-        border-radius: 5px;
+        /* border-radius: 10px; */
         transition: all 0.2 ease;
         touch-action: manipulation;
         cursor: pointer;
